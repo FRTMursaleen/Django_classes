@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04fce0ea-8ae7-4fb5-8c9c-a73feebe3601" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="04fce0ea-8ae7-4fb5-8c9c-a73feebe3601" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -486,6 +484,14 @@
       <option name="presentableId" value="Default" />
       <updated>1534145690245</updated>
     </task>
+    <task id="LOCAL-00001" summary="got destination">
+      <created>1536834859369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536834859369</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -537,7 +543,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="got destination" />
+    <option name="LAST_COMMIT_MESSAGE" value="got destination" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
