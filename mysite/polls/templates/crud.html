@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!Doctype HTML>
+<html lang="en">
+<head>
+          <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/home.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        background-color;
+        background-repeat:no-repetition;
+        background-size:cover;
+        }
+</style>
+<title>CRUD</title>
+
+<body >
+<h2>CRUD OPERATION</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>View</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for account in object_list%}
+        <tr>
+            <td>{{account.name}}</td>
+            <td>{{account.id}}</td>
+            <td><a href="{% url 'polls:delete_profile' account.id%}">Delete</a></td>
+        </tr>
+    {%endfor%}
+    </tbody>
+</table>
+
+</body>
+</html>

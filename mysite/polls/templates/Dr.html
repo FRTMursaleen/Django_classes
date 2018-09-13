@@ -1,0 +1,299 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/Dr.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    html, body {
+  margin:0; padding:0;
+}
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  background-color: white;
+  font-family: 'Open Sans', Georgia, Times, "Times New Roman", serif;
+  color: #333;
+}
+
+
+/* highlight colors */
+::-moz-selection {
+ background-color: #333;
+ color: white;
+}
+
+::selection {
+  background-color: #333;
+  color: white;
+}
+
+/* ul-reset */
+
+ul.banner {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* container */
+
+.container-slide {
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* jtaCarousel */
+
+.jtaCarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner-controls {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.banner-prev-position {
+  left: 0;
+  padding-left: .75em;
+}
+
+.banner-next-position {
+  right: 0;
+  padding-right: .75em;
+}
+
+.banner-control-button {
+  border-radius: 100%;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+  border-color: black;
+  background-color: #8989f052;
+  border-radius: 31px;
+  width: 50px;
+}
+
+.banner-control-button:hover { opacity: .5; }
+
+.banner {  width: calc(100% * 5);
+}
+
+.banner-item {
+  float: left;
+  width: calc(100% / 5);
+}
+
+.banner-item > div {
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 450px;
+  line-height: 450px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.banner-location {
+  position: absolute;
+  z-index: 2;
+  bottom: .75em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: .75em;
+  line-height: 1;
+  cursor: default;
+}
+
+.banner-indicator {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  border-radius: 100%;
+  margin-left: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-indicator:first-child { margin-left: 0; }
+
+.banner-indicator.selected {
+  background-color: white;
+  cursor: auto;
+}
+</style>
+<body>
+<!-- Header============================================================== -->
+<header class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
+                <ul class="list-inline">
+                    <li style="color:black;">
+                        <a href="+92 3075136490"><span class="glyphicon glyphicon-earphone"></span>+92 3075136490 </a>
+                    </li>
+                    <li>
+                        <a href=""><i style="font-size:14px; color:black" class="fa">&#xf173;</i></a>
+                    </li>
+                    <li>
+                        <a href="/">pythonsweng@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-6 col-lg-6">
+                <ul class="list-inline" id="move">
+                    <li><img src="/static/admin/img/logo.jpg/" alt="Ramay Clininc"></li>
+                    <li> <a href="/"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Nav Bar============================================================== -->
+<div class="main-header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a class="navbar-brand-logo" href=""  title="Nephrologist">
+                     <img src="/static/admin/img/LogoSample_ByTailorBrands.jpg" alt="Ramay Clinic">
+                 </a>
+             </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" style="color:blue;"><a href="#">Home</a></li>
+                     <li><a href="#">About Us</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Kidneys</a></li>
+                            <li><a href="#">Lungs</a></li>
+                            <li><a href="#">Arteries</a></li>
+                            <li><a href="#">Viens</a></li>
+                            <li><a href="#">Viens</a></li>
+                            <li><a href="#">Viens</a></li>
+                            <li><a href="#">Viens</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gallery<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Photos</a></li>
+                            <li><a href="#">Videos</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+                <!--<ul class="nav navbar-nav navbar-right">-->
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                <!--</ul>-->
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Home Slider============================================================== -->
+<div class="container container-slide">
+    <div class="jtaCarousel">
+        <div class="banner-controls banner-prev-position">
+          <div class="banner-control-button banner-prev"> &lt; </div>
+        </div>
+            <ul class="banner">
+                <li class="banner-item">
+                    <div style=" background-image:url('/static/admin/img/bak.jpg/')"><p style="color:black;">Slide 1</p></div>
+                </li>
+                <li class="banner-item">
+                    <div style="background-image:url(https://unsplash.it/1800/1100/?random)"><p style="color:black;">Slide 2</p></div>
+                </li>
+                <li class="banner-item">
+                    <div style="background-image:url(https://unsplash.it/1800/1000/?random)"><p style="color:black;">Slide 3</p></div>
+                </li>
+                <li class="banner-item">
+                    <div style="background-image:url(https://unsplash.it/1600/800/?random)"></div>
+                </li>
+                <li class="banner-item">
+                    <div style="background-image:url(https://unsplash.it/1600/900/?random)"></div>
+                </li>
+            </ul>
+
+            <div class="banner-controls banner-next-position">
+                <div class="banner-control-button banner-next"> &gt; </div>
+            </div>
+        <div class="banner-location"></div>
+    </div>
+</div>
+
+<div class="middle">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="section">
+                    <img src="/static/admin/img/logo.jpg/" alt="kidney">
+                    <div class="para">
+                        <h2>About Me</h2>
+                        <h4>Dr Bilal Rasool Ramay</h4>
+                    </div>
+                </div>
+                <p></p>
+                <p style="margin-left:14px; margin-top:75px">
+                    B.Sc, M.B.B.S (K.E.M.U), MRCP Nephrology SCE (UK) F.C.P.S (NEPHROLOGY), MISN, MPSN HEAD AND ASSISTANT PROFESSOR OF DEPARTMENT OF NEPHROLOGY, LAHORE GENERAL HOSPITAL. CONSULTANT NEPHROLOGIST AND TRANSPLANT PHYSICIAN.
+                </p>
+                <p style="margin-left:14px">
+                    Nephrologist Dr. Aurangzeb Afzal is 19 medals holder at undergraduate level and known as one of best nephrologist in Lahore, he is Consultant Nephrologist & Transplant Physician at Lahore General Hospital /AMC/PGMI. He did B.Sc., M.B.B.S from King Edward Medical University and done his FCPS (Nephrology).
+                </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="/static/admin/js/jtaCarousel.js/"></script>
+
+<script>
+    $(document).ready(function(){
+    $(".navbar-toggle").click(function(){
+        $(".container-slide").css({"margin-top": "75%", "display":"block"});
+    });
+});
+</script>
+
+</html>

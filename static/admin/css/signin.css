@@ -1,0 +1,61 @@
+.back{
+
+}
+
+
+.back #form-data{
+    margin-top: 10%;
+    margin: auto;
+    width: 55%;
+    margin-top: 124px;
+    height: 237px;
+    border-radius: 8px;
+    background-color: #8f9fcb6e;
+
+}
+
+.back #form-data form{
+padding:33px;
+}
+
+
+label {
+    color:white;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#form-data input[type="submit"]{
+margin-top: 32px;
+width: 114px;
+}
+
+.back_signup{
+    background-color:#9acd327a;
+    width: 55%;
+    margin: auto;
+
+}
+
+
+.back_signup form{
+padding: 34px;
+}
+
+.head{
+    margin: auto;
+    width: 55%;
+    height: 40px;
+    background-color: #8fb0bc;
+}
+
+.head p{
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+    padding: 4px;
+    font-size: 21px;
+
+}

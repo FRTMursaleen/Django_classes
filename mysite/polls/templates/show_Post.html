@@ -1,0 +1,74 @@
+<!Doctype HtML>
+<html lang="en">
+<head>
+          <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/signin.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        background-color;
+        background-repeat:no-repetition;
+        background-size:cover;
+        }
+</style>
+<title>Class Base Views Practice</title>
+<body >
+  {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" id="checker" style="color: #c21a1a;background-color:lightpink;font-size: 1.3em;width: 82%;margin-left: 75px;">{{ message }}</div>
+            <span class="glyphi glyphicon-remove-sign"></span>
+        {% endfor %}
+  {% endif %}
+<div style="margin-top: 70px;">
+    <table class="table table-bordered table-condensed" style="margin-bottom:0;width: 100%;">
+        <tr>
+            <th style="text-align:center;padding:2%; "> ID</th>
+            <th style="text-align:center;padding:2%;"> Message </th>
+            <th style="text-align:center;padding:2%;"> Created BY </th>
+            <th style="text-align:center;padding:2%;"> Edit </th>
+
+
+        </tr >
+        {%for post in Post%}
+            <tr style="height: 57px;text-align:center;">
+                <td  style="padding-bottom: 23px;">{{post.id}} </td>
+                <td  style="padding-bottom: 23px;">{{post.message}} </td>
+                <td  style="padding-bottom: 23px;">{{post.created_by}} </td>
+
+                <td>
+                    <a href="{% url 'polls:edit_post' post.id%}"><p><span class="glyphicon glyphicon-edit" style="text-align:center;"></span></p></a>
+                </td>
+
+            </tr>
+        {%endfor%}
+    </table>
+{% if is_paginated %}
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+                  <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+                {% if page_obj.has_next %}
+                  <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+        </ul>
+{% endif %}
+
+</div>
+
+</body>
+</html>

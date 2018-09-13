@@ -1,0 +1,191 @@
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Helvetica Neue";
+}
+
+.top-header{
+width:100%;
+background-color:#8989f052;
+color:black;
+padding: 3px;
+}
+
+.top-header .list-inline li a{
+color:black;
+text-decoration:none;
+padding:5px;
+margin-top:10px;
+}
+
+#right-side ul li{
+float:right;
+list-style:None
+}
+
+#move{
+float:right;
+}
+.top-header.list-inline li a{
+margin-top:10px;
+
+}
+@media (max-width: 800px) {
+.top-header {
+display: none;
+}
+}
+
+.main-header{
+    width: 100%;
+    height: 100px;
+}
+.main-header .navbar-default {
+background-color: white;
+border-color: white;
+}
+
+.navbar-brand-logo img{
+    height: 100px;
+    margin-top: 0px;
+}
+
+.main-header #myNavbar ul {
+margin-top: 25px;
+}
+
+.main-header #myNavbar ul li a{
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 900;
+    font-size: medium;
+}
+.main-header #myNavbar .dropdown-menu{
+background-color:#8989f052;
+
+}
+.main-header #myNavbar ul li a:hover{
+color: #91640F;
+border-bottom: 2px solid #91640F;
+
+}
+
+.main-header .navbar-default .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 40px;
+}
+
+@media (width: 1200px) {
+.container-slide {
+margin-top:0 !important;
+}
+}
+
+@media (min-width: 992px) {
+    .container-slide{
+        margin-top:0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-slide{
+        margin-top:0 !important;
+    }
+}
+
+.middle img{
+    margin-left:14px;
+
+}
+
+.section h2{
+
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.para {
+    float: right;
+    margin-top: -26px;
+    margin-right: 42%;
+
+}
+.section .para h4{
+    font-size: 13px;
+    color: grey;
+}

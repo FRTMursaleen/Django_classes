@@ -1,0 +1,36 @@
+.top{
+background-color:#00800078;
+margin:0;
+color:white;
+font-family:"Times New Roman", Times, serif;
+}
+
+.data{
+    width: 50%;
+    margin: auto;
+    background-color: #00800078;
+    height: 200px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.date{
+
+padding:5px;
+
+}
+
+input[type="submit"]{
+    color: white;
+    float: left;
+    margin-top: 9px;
+    background-color: #00800078;
+    border-color:#00800078;
+
+}
+
+input[type="submit"]:hover{
+    background-color: #00800078;
+    border-color:#00800080;
+
+}

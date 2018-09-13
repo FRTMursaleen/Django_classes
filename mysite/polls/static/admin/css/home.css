@@ -1,0 +1,22 @@
+.head{
+    background-color:grey;
+    color:white;
+}
+
+.head p{
+    width: 55px;
+    display: inline-block;
+    padding: 4px;
+}
+
+.head button{
+    float: right;
+    display: inline-block;
+}
+
+.profile{
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+
+}

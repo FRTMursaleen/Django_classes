@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!Doctype HTML>
+<html lang="en">
+<head>
+          <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/home.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        background-repeat:no-repetition;
+        background-size:cover;
+        }
+</style>
+<title>Class Base Views Practice</title>
+
+<body >
+<div>
+    <div class="head">
+            <p> Profile </p>
+        {% if request.user.is_authenticated%}
+             <button type="button" class="btn btn-default btn-sm">
+                 <span class="glyphicon glyphicon-user"></span> {{request.user.username}}
+             </button>
+        {% endif %}
+
+    </div>
+     {% for data in Account %}
+
+    <p>{{data.name}}</p>
+
+    {%  endfor %}
+
+    <div class="profile">
+        <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

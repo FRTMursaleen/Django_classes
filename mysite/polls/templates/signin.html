@@ -1,0 +1,38 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+          <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/signin.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        background-color;
+        background-repeat:no-repetition;
+        background-size:cover;
+        }
+</style>
+<title>Class Base Views Practice</title>
+
+<body >
+
+<div style="margin-top: 70px;">
+    <div class="head">
+            <p> Please Sign In</p>
+    </div>
+    <div class="back_signup">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+        <h4 class="text-center">If you Don't have an Account ? Please Sign Up</h4>
+        <a href="{%url 'polls:signup' %}"><button type="button" class="btn btn-primary center-block">Sign Up</button></a>
+    </div>
+</div>
+
+</body>
+</html>

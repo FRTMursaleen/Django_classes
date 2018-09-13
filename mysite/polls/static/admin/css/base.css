@@ -1,0 +1,181 @@
+a,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+html,
+i,
+iframe,
+img,
+menu,
+nav,
+object,
+ol,
+p,
+section,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+ul,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Helvetica Neue";
+    color:white;
+}
+#container{
+    background-color: lightgrey;
+    height: 54px;
+}
+
+#container h2{
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    display: inline;
+}
+
+#container ul{
+list-style:none;
+float: right;
+margin-right: 20px;
+width:max-content;
+}
+
+#container ul li{
+background-color:orange;
+width:150px;
+height:50px;
+line-height:50px;
+text-align: center;
+border: 1px solid white;
+float: left;
+color:white;
+font-size:20px;
+border-radius: 4px;
+}
+
+#container ul li:hover{
+color:lightgrey;
+background-color:green;
+}
+
+#container ul li{
+margin:0;
+padding:0px;
+}
+
+#container ul ul{
+display:none;
+}
+
+#container ul li:hover > ul{
+display:block;
+}
+
+
+@media(min-width: 768px){
+#container ul li:hover > ul{
+margin-left:20px !important;
+display:block;
+}
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.aa{
+width:330px;
+height:230px;
+background-color:rgba(0,0,0,0.5);
+margin:0 auto;
+margin-top:100px;
+padding-top:20px;
+padding-left:30px;
+border-radius:15px;
+-webkit-border-radius:15px;
+color:white;
+font-weight:bolder;
+}
+
+.aa input[type=text] {
+    border-radius: 0;
+    padding: 15px;
+    width: 91%;
+    border-radius:5px;
+}
+
+.aa input[type=password]{
+    border-radius: 0;
+    padding: 15px;
+    width: 91%;
+    border-radius:5px;
+}
+
+.aa input[type="submit"]{
+color:white;
+width:100px;
+height:35px;
+background-color:skyblue;
+border-radius:6px;
+}
+
+.settings{
+position:relative;
+margin-top:0;
+}
+
+.settings img{
+width:100%;
+height:auto;
+z-index:-1;
+}
+
+.settings #top{
+position:absolute;
+top: 50px;
+right:16px;
+}
+
+.settings #top p{
+color:black;
+font-size:20px;
+
+}

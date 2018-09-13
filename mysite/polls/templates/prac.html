@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<!Doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/prac.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.top{
+    background-image:url('/static/admin/img/bg.jpg/');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:right;
+}
+.parallax{
+    background-image:url('/static/admin/img/bak.jpg/');
+    height:500px;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position:relative;
+
+
+}
+</style>
+<title>CRUD</title>
+<body>
+<div class="top">
+    <section class="text-center">
+        <p >Let’s have a coffee and talk<br>about your project</p>
+        <button type="button" class="btn btn-success">Start A Project</button>
+    </section>
+
+</div>
+
+<div class="conainer">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 chk">
+            <img src="/static/admin/img/medical.jpg/" alt="Medical Services" style="width:345px;margin-left: 2px;">
+            <div id="detail">
+                <h2>There is Doctor</h2>
+                <p>Just come here and <br>check your self</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 chk">
+            <img src="/static/admin/img/medical.jpg/" alt="Medical Services" style="float:right;width:345px;margin-left:2px;">
+
+            <div id="detail1">
+                <h2>There is Doctor</h2>
+                <p>Just come here and <br>check your self</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax"></div>
+<div class="area" >
+    <p>Tip: Try to remove the background-attachment property to remove the scrolling effect.</p>
+</div>
+
+<div style="color:black;margin-top: 38%;">
+    {% for accounts in object_list%}
+    <p class="text-center">{{ accounts.gender}}</p>
+    <div style="float:left;">
+        <p class="text-center">{{ accounts.name}}</p>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

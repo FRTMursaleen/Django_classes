@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!Doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/admin/css/books.css/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+</style>
+<title>CRUD</title>
+<body>
+<div class="top">
+    <h2 class="text-center">Data of your issue Books</h2>
+</div>
+<table style="background-color:#00800078;margin: auto;width: 50%;">
+    <thead>
+    <tr>
+        <th> Detail </th>
+        <th> Delete </th>
+        <th> Edit </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for books in object_list%}
+        <tr>
+            <td>{{books.book_name}}</td>
+            <td>{{books.issue_date}}</td>
+            <td><a href="{%url 'polls:edit' books.id %}"> <span class="glyphicon glyphicon-minus"></span></a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>
