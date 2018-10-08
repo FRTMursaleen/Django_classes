@@ -16,6 +16,7 @@ from django.views.generic import TemplateView, View, ListView, DetailView
 from rest_framework.decorators import api_view, schema
 # Create your views here.
 
+
 class SignUp(FormView):
     template_name = 'signup.html'
     form_class = SignUpForm

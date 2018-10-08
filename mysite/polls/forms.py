@@ -1,6 +1,5 @@
 from django.contrib.auth import authenticate
 from django.forms import DateTimeInput
-
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
