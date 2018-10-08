@@ -288,6 +288,7 @@ class PostdataSerializer(APIView):
         serializer = PostSerializerData(queryset, many=True)
         return Response(serializer.data)
 
+
     def post(self,request, pk):
         serializer = PostSerializerData(data=request.data)
         if serializer.is_valid():
