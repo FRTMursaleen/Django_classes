@@ -24,7 +24,7 @@
     <div class="back_signup">
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {% render_form serializer %}
             <input type="submit" value="Submit">
         </form>
     </div>

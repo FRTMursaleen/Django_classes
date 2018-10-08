@@ -156,7 +156,7 @@ class DataShow(ListView):
     context_object_name = 'books'
 
 
-def edit(request, pk_id=None):
+def delete_data(request, pk_id=None):
     id = int(pk_id)
     instance = get_object_or_404(Books, id=id)
     print(instance)
@@ -279,22 +279,19 @@ class ShowPosts(ListView):
 
 class PostdataSerializer(APIView):
     serializer_type = PostSerializerData
-    pk_url_kwarg = "pk"
-    template_name = 'Post.html'
-    permission_classes = [IsAuthenticated,]
+    permission_classes = [IsAuthenticated]
 
-    def get(self,request, format=None):
+    def get(self,request, format=None, pk=None):
         Post_data = Post.objects.all()
         serializer = PostSerializerData(Post_data, many=True)
         return Response(serializer.data)
 
-    def post(self,request,):
-        serializer = PostSerializerData(request.data)
+    def post(self,request, pk):
+        serializer = PostSerilizer(data=request.data)
         if serializer.is_valid():
-            instance = serializer.save()
-            instance.save()
+            serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', 'POST'])
@@ -335,6 +332,7 @@ class PostData(APIView):
 
 
 class AccountsData(APIView):
+    #use to show form on UI
     serializer_class = PostSerilizer
     template_name = 'accounts_data.html'
     permission_classes = [IsAuthenticated]
