@@ -1,7 +1,8 @@
+{% load rest_framework %}
 <!Doctype HtML>
 <html lang="en">
 <head>
-          <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/admin/css/signin.css/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,16 +20,15 @@
 <body >
 <div style="margin-top: 70px;">
     <div class="head">
-            <p> Please Sign Up</p>
+        <p> Please Sign Up</p>
     </div>
     <div class="back_signup">
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {% render_form serializer %}
             <input type="submit" value="Submit">
         </form>
     </div>
 </div>
 
 </body>
-</html>
