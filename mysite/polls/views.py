@@ -6,8 +6,8 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-from .serializer import PostSerilizer, SongsSerializer,PostSerializerData
+from rest_framework.renderers import TemplateHTMLRenderer
+from .serializer import PostSerilizer, SongsSerializer,PostSerializerData,TodoSerializer
 from django.contrib.auth import login
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import *
@@ -156,7 +156,7 @@ class DataShow(ListView):
     context_object_name = 'books'
 
 
-def edit(request, pk_id=None):
+def delete_data(request, pk_id=None):
     id = int(pk_id)
     instance = get_object_or_404(Books, id=id)
     print(instance)
@@ -278,23 +278,23 @@ class ShowPosts(ListView):
 
 
 class PostdataSerializer(APIView):
-    serializer_type = PostSerializerData
-    pk_url_kwarg = "pk"
-    template_name = 'Post.html'
-    permission_classes = [IsAuthenticated,]
+    serializer_class = PostSerializerData
+    template_name = 'fine.html'
+    permission_classes = [IsAuthenticated]
 
-    def get(self,request, format=None):
-        Post_data = Post.objects.all()
-        serializer = PostSerializerData(Post_data, many=True)
+    def get(self, request, pk):
+        id = int(pk)
+        queryset = Post.objects.filter(id = id)
+        serializer = PostSerializerData(queryset, many=True)
         return Response(serializer.data)
 
-    def post(self,request,):
-        serializer = PostSerializerData(request.data)
+
+    def post(self,request, pk):
+        serializer = PostSerializerData(data=request.data)
         if serializer.is_valid():
-            instance = serializer.save()
-            instance.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', 'POST'])
@@ -335,6 +335,7 @@ class PostData(APIView):
 
 
 class AccountsData(APIView):
+    #use to show form on UI
     serializer_class = PostSerilizer
     template_name = 'accounts_data.html'
     permission_classes = [IsAuthenticated]

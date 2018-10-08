@@ -21,7 +21,7 @@ urlpatterns = [
     url('sys/',views.CheckSerializer, name='sys'),
     url('serializer/',views.PostSerialize.as_view(), name='check'),
     url('show/', views.ArticleViews.as_view(), name='show'),
-    url('edit_book/(?P<pk_id>[0-9]+)/',views.edit, name='edit'),
+    url('delete_data/(?P<pk_id>[0-9]+)/',views.delete_data, name='delete'),
     url('books_list/', views.DataShow.as_view(),name='list'),
     url('delete_view/(?P<pk_id>[0-9]+)/',views.profiledelete, name='delete_profile'),
     url('list/', views.ProfileList.as_view(template_name='crud.html'), name='profile_list'),

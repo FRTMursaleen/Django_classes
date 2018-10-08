@@ -29,7 +29,7 @@
         <tr>
             <td>{{books.book_name}}</td>
             <td>{{books.issue_date}}</td>
-            <td><a href="{%url 'polls:edit' books.id %}"> <span class="glyphicon glyphicon-minus"></span></a></td>
+            <td><a href="{%url 'polls:delete' books.id %}"> <span class="glyphicon glyphicon-minus"></span></a></td>
         </tr>
     {% endfor %}
     </tbody>
